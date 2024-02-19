@@ -22,3 +22,7 @@ def home():
 @app.route("/product/<int:id>")
 def product(id):
     return render_template("product.html", product = products[id - 1])
+
+@app.route("/about")
+def about():
+    return "О нас"
