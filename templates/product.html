@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'navbar.html' %}
+
+{% block body %}
     <h1>{{product.name}}</h1>
     <p>{{product.price}}</p>
     <p>{{product.description}}</p>
+    <a href="/product/{{product.id}}/update">Изменить</a>
     <a href="/product/{{product.id}}/delete">Удалить</a>
-</body>
-</html>
+{% endblock %}

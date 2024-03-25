@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'navbar.html' %}
+
+{% block body %}
     {% for product in products %}
         <img src="/static/img/{{product.imageName}}" style="width: 150px; display: block;">
         <h4>{{product.name}}</h4>
         <p>{{product.price}}</p>
         <a href="/product/{{product.id}}">подробнее</a>
     {% endfor %}
-</body>
-</html>
+{% endblock %}
